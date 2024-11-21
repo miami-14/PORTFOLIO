@@ -1,0 +1,10 @@
+realisations:
+  contenus_obligatoires:
+    titre: "Mon titre personnalisé"
+    description: "Une description complète"
+    illustration: "Une belle illustration"
+    documents: 
+      type: 
+        - "Manuel"
+        - "Guide"
+        - "Exemples"
