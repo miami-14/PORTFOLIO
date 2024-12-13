@@ -23,16 +23,17 @@ echo"<h1>".$data["Description"]."</h1>";
 </head>
 <body>
 <h1><?= $data["Title"]?>
-<?php foreach ($data["Description"] as $Description) {?>
+<?php foreach ($data["Description"] as $item) {?>
     <h2><?= $Description["Sections"]?></h2>
     <?php foreach ($Sections["Nom"] as $item) {?>
         <div class='...'>
+        <?php foreach ($Sections["id"] as $item) {?>
         <strong><?=  $item["Id"]?></strong>
-        <div class='barre'>
-        <div class='...' style='width: <?=  $item["niveau"]?>%; background-color: <?= $item["color"]?>;'>
+        <?php foreach ($Sections["texte"] as $item) {?>
+
         <?=  $item["Texte"]?>
-        </div>
-        </div>
-        </div>
+        
+        
     <?php }?>
 <?php }?>
+
