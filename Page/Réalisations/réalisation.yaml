@@ -1,10 +1,15 @@
-realisations:
-  contenus_obligatoires:
-    titre: "Mon titre personnalisé"
-    description: "Une description complète"
-    illustration: "Une belle illustration"
-    documents: 
-      type: 
-        - "Manuel"
-        - "Guide"
-        - "Exemples"
+Title: "Réalisation"
+Description: "Mes réalisations"
+Sections:
+  - Nom: "Accueil"
+    Id: "home"
+    Texte: "Bienvenue sur mon site!"
+  - Nom: "À propos"
+    Id: "about"
+    Texte: "En savoir plus sur moi et mon parcours."
+  - Nom: "Projets"
+    Id: "projects"
+    Texte: "Découvrez mes projets récents."
+  - Nom: "Contact"
+    Id: "contact"
+    Texte: "Contactez-moi via ce formulaire."
