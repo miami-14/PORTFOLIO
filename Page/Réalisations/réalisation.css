@@ -1,25 +1,86 @@
+/* Style global */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-/* Style pour le titre principal */
-h1 {
-  background-color: #4c66af;
-  color: white;
-  padding: 20px;
+  font-family: Arial, sans-serif;
   margin: 0;
-  width: 100vw;
-  border-bottom-left-radius: 400px;
-  border-bottom-right-radius: 400px;
- 
- 
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
 }
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #2c3e50;
+}
+
+h2 {
+  color: #34495e;
+  margin: 10px 0;
+  border-left: 5px solid #3498db;
+  padding-left: 10px;
+}
+
+/* Conteneur principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Section de projet */
+.projet {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.projet strong {
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.projet p {
+  margin: 10px 0 15px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Barre de progression */
+.barre {
+  width: 100%;
+  background-color: #e0e0e0;
+  height: 25px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.niveau {
+  height: 100%;
+  text-align: center;
+  line-height: 25px;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 50px;
+}
+
+/* Couleurs dynamiques */
+.niveau.low {
+  background-color: #e74c3c; /* Rouge */
+}
+
+.niveau.medium {
+  background-color: #f1c40f; /* Jaune */
+}
+
+.niveau.high {
+  background-color: #2ecc71; /* Vert */
+}
+
+
+
+

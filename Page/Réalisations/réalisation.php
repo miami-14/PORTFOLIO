@@ -26,7 +26,6 @@ echo "<!DOCTYPE html>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <link rel='stylesheet' href='réalisation.css'>
 <title>Présentation des Réalisations</title>
-<link rel='stylesheet' href='style.css'>
 </head>
 <body>
 
