@@ -1,59 +1,44 @@
+<link rel="stylesheet" href="../../réalisation.css;"> 
+
+<h1>Réalisations</h1>
+
 <?php
 
-// Charger la fonction pour parser le YAML
 require_once("../yaml/yaml.php");
-
-// Lire et parser le fichier YAML
 $data = yaml_parse_file('réalisation.yaml');
 
-// Vérifier que les données sont correctement chargées
-if (!$data) {
-    die("Erreur : Impossible de lire le fichier YAML.");
-}
+echo"<h1>".$data["Title"]."</h1>";
+echo"<h1>".$data["Description"]."</h1>";
 
-// Définir les valeurs par défaut au cas où certaines informations seraient manquantes
-$titre = $data['realisations']['contenus_obligatoires']['titre'] ?? "Titre par défaut";
-$description = $data['realisations']['contenus_obligatoires']['description'] ?? "Description par défaut";
-$illustration = $data['realisations']['contenus_obligatoires']['illustration'] ?? "Illustration par défaut";
-$documents = $data['realisations']['contenus_obligatoires']['documents']['type'] ?? ["Procédures", "Captures", "Autres"];
+?>
 
-// Afficher les réalisations pour vérifier les données
+<link rel='stylesheet' href='réalisation.css'>
 
-echo "<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang='fr'>
 <head>
 <meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<<<<<<< HEAD
 <link rel='stylesheet' href='réalisation.css'>
 <title>Présentation des Réalisations</title>
+=======
+<title><?= $data["Title"] ?></title>
+>>>>>>> 422989963e88f98dee10c51257ceb6df69662fd5
 </head>
 <body>
+<h1><?= $data["Title"]?>
+<?php foreach ($data["Description"] as $item) {?>
+    <h2><?= $Description["Sections"]?></h2>
+    <?php foreach ($Sections["Nom"] as $item) {?>
+        <div class='...'>
+        <?php foreach ($Sections["id"] as $item) {?>
+        <strong><?=  $item["Id"]?></strong>
+        <?php foreach ($Sections["texte"] as $item) {?>
 
-<header>
-<h1>Réalisations</h1>
-</header>
-
-<main>
-<section>
-<h2>Contenus obligatoires</h2>
-<ul>
-<li><strong>Titre :</strong> " . htmlspecialchars($titre) ." </li>
-<li><strong>Description :</strong> " . htmlspecialchars($description) ." </li>
-<li><strong>Illustration :</strong> " . htmlspecialchars($illustration) ." </li>
-<li><strong>Documents :</strong>
-<ul>
-</ul>
-</li>
-</ul>
-</section>
-</main>
-
- <footer>
- <p>Réalisé avec PHP et YAML</p>
- </footer>
-
- </body>
- </html>"
-?>
-
+        <?=  $item["Texte"]?>
+        
+        
+    <?php }?>
+<?php }?>
 
