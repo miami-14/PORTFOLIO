@@ -15,7 +15,7 @@ $data = yaml_parse_file('page.yaml');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page </title>
-    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="../Page/page.css">
     
     <h1> Bienvenu sur le projet PORTFOLIO  </h1>
    
@@ -23,7 +23,7 @@ $data = yaml_parse_file('page.yaml');
 <body>
 
 
-<button> <li><a href="../Accueil/accueil.php" data-text="Acceuil">Acceuil</a></li> </button>
+<button> <li><a href="../Accueil/accueil.php" data-text="Acceuil">Acceuilùmmmmm</a></li> </button>
 <button> <li><a href="../Compétences/comptétences.php" data-text="Compétences">Compétences</a></li> </button>
 <button> <li><a href="../Réalisations/réalisation.php" data-text="Réalisation">Réalisation</a></li> </button>
 <button> <li><a href="../Formation/formation.php" data-text="Formation">Formation</a></li> </button>
