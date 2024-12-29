@@ -1,51 +1,34 @@
 <?php
-// Charger le fichier YAML
+
+// Charger la fonction pour parser le YAML
 require_once("../yaml/yaml.php");
-$data = yaml_parse_file('formation.yaml');
+
+// Lire le fichier YAML
+$data = yaml_parse_file('page.yaml');
+
+
 ?>
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="formation.css">
-    <title><?= $data["Title"] ?></title>
+    <title>Page Portfolio </title>
+    <link rel="stylesheet" href="page.css">
+    
+    <h1> Bienvenu sur le projet PORTFOLIO  </h1>
+   
 </head>
 <body>
-    <!-- Titre principal -->
-    <div class="container">
-        <h1><?= $data["Title"] ?></h1>
-        <p><?= $data["Description"] ?></p>
-    </div>
 
-    <!-- Lien vers le CV -->
-    <div class="container cv-section">
-        <?php if (isset($data["CV"]["URL"])): ?>
-            <p>
-                <a href="<?= $data["CV"]["URL"] ?>" target="_blank" class="cv-link">
-                    <?= $data["CV"]["Label"] ?>
-                </a>
-            </p>
-        <?php endif; ?>
-    </div>
 
-    <!-- Parcourir les sections -->
-    <div class="container">
-        <?php if (isset($data["Sections"])): ?>
-            <?php foreach ($data["Sections"] as $section): ?>
-                <div class="projet" id="<?= $section["Id"] ?>">
-                    <h2><?= $section["Nom"] ?></h2>
-                    <ul>
-                        <?php foreach (explode("\n", trim($section["Texte"])) as $item): ?>
-                            <li><?= $item ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <p>Aucune section disponible.</p>
-        <?php endif; ?>
-    </div>
+<button> <li><a href="../Accueil/accueil.php" data-text="Acceuil">Acceuil</a></li> </button>
+<button> <li><a href="../Compétences/comptétences.php" data-text="Compétences">Compétence</a></li> </button>
+<button> <li><a href="../Réalisations/réalisation.php" data-text="Réalisation">Réalisation</a></li> </button>
+<button> <li><a href="../Formation/formation.php" data-text="Formation">Formation</a></li> </button>
+<button> <li><a href="../Contact/contact.php" data-text="Contact">Contact</a></li> </button>
+
+        </ul>
 </body>
 </html>
