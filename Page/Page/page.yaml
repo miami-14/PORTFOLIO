@@ -1,22 +1,20 @@
-page:
-  lang: "fr"
-  head:
-    meta:
-      - charset: "UTF-8"
-      - name: "viewport"
-        content: "width=device-width, initial-scale=1.0"
-    title: "Page d'accueil"
-  body:
-    container:
-      header:
-        h1: "Bienvenue sur ma page d'accueil"
-      paragraph: "Sélectionnez un projet ci-dessous :"
-      projects:
-        - name: "Projet 1"
-          link: "projet1/index.php"
-        - name: "Projet 2"
-          link: "projet2/index.php"
-        - name: "Projet 3"
-          link: "projet3/index.php"
-        - name: "Projet 4"
-          link: "projet4/index.php"
+Title: "Mes formations"
+Description: "Voici une liste de mes formations et projets."
+CV:
+  URL: "CV.html" # Lien vers le CV
+  Label: "Cliquez ici pour voir mon CV" # Texte affiché pour le lien
+Sections:
+  - Id: "Lycée-Saint-Ursule"
+    Nom: "Bac STMG"
+    Texte: |
+      économie
+      Droit
+      SIR
+  - Id: "Caen-sup"
+    Nom: "BTS SIO"
+    Texte: |
+      Réseau
+      Développer
+      Culture générale
+      Droit
+      économie
