@@ -1,4 +1,5 @@
 titre: "Compétences"
+presentation1: "Présentation"
 presentation:
   - domaine: "bureautique"
     items:
@@ -25,6 +26,8 @@ presentation:
       - nom: "YAML"
         niveau: 40
         color: "gray"
+
+      
 
       
         
