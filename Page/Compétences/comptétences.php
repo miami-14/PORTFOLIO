@@ -1,18 +1,11 @@
-<link rel="stylesheet" href="../../réalisation.css;"> 
-
-<h1>Réalisations</h1>
-
 <?php
 
 require_once("../yaml/yaml.php");
-$data = yaml_parse_file('réalisation.yaml');
-
-echo"<h1>".$data["Title"]."</h1>";
-echo"<h1>".$data["Description"]."</h1>";
+$data = yaml_parse_file('compétences.yaml');
 
 ?>
 
-<link rel='stylesheet' href='réalisation.css'>
+<link rel='stylesheet' href='compétences.css'>
 
 <!DOCTYPE html>
 <html lang='fr'>
@@ -36,4 +29,5 @@ echo"<h1>".$data["Description"]."</h1>";
         </div>
     <?php }?>
 <?php }?>
+
 
