@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="procédure.css">
+
+<h1>Pour Heberger un site web via 3 methodes </h1>
+
+
+⚠️  ne pas copier-coller et l'invite de commande sur Debian ⚠️
+
+
+
+
+<h1>Installation apache2</h1>
+
+ <p>A faire un <strong>nano ect/network/interfaces </strong>. </p> 
+ <p> - nano est un éditeur de texte simple et léger en ligne de commande.et d'ouvrir le fichier de configuration réseau situé à l'emplacement /etc/network/interfaces.</p> 
+
+ <img src="../../Image/debian 0.0.png" alt="Photo debian">
+
+
+<p>Aller dernier texte par exemple <strong>iface ens18 inet dhcp</strong></p>
+<p>- Cette commende ouvre un fichier de configuration. </p>
+
+<img src="../../Image/debian 0.1.png" alt="Photo debian">
+
+
+
+<p> Ajouter  <strong> # </strong> </p>
+<p>- vous ajoutez un # au début d'une ligne, cela a pour effet de commenter cette ligne.</p>
+
+<img src="../../Image/debian 0.2.png" alt="Photo debian 2">
+
+
+<p>Puis ajouter <strong>iface ens18 inet static</strong></p>
+<p>- La ligne iface ens18 inet static dans un fichier de configuration réseau (comme /etc/network/interfaces sur Debian) spécifie qu’une interface réseau nommée ens18 doit être configurée avec une adresse IP statique.</p>
+
+<img src="../../Image/debian 0.3.png" alt="Photo debian 2">
+
+<p>mettre l'adresse ip adress 172.17.202.12/16 et gateway 172.17.0.254</p>
+<p>- Pour configurer une interface réseau avec l'adresse IP 172.17.202.12/16 et la passerelle 172.17.0.254 en utilisant nano.</p>
+
+<img src="../../Image/debian 0.4.png" alt="Photo debian 2">
+
+
+<p>Faire un <strong>nano /etc/resolv.conf</strong> </p>
+<p>Mettre nameserver 172.17.10.1 et nameserver 172.17.10.2</p>
+<p>-  nano  est un éditeur de texte simple et léger en ligne de commande.et d'ouvrir le fichier de configuration réseau situé à l'emplacement /etc/network/interfaces </p>
+
+<img src="../../Image/debian 0.5.png" alt="Photo debian 2">
+
+
+<p>- A la fin de  </strong>/etc/network/interfaces </strong>  nous attendons ce résultat.</p>
+
+<img src="../../Image/debian 0.6.png" alt="Photo debian 2">
+
+
+
+<p>Puis en dehors de nano faite <strong>cat /etc/resolv.conf</strong></p>
+<p>- La commande <strong>cat /etc/resolv.conf </strong>affiche le contenu du fichier /etc/resolv.conf. Ce fichier est utilisé par le système pour configurer les serveurs DNS, qui traduisent les noms de domaine en adresses IP.</p>
+
+<img src="../../Image/debian 0.7.png" alt="Photo debian 2">
+
+
+<p><strong>cat /etc/network/interfaces</strong></p>
+<p>- Cela a la commande <strong>cat /etc/network/interfaces</strong> dans un système Debian affiche le contenu du fichier de configuration réseau `/etc/network/interfaces`.</p>
+
+<img src="../../Image/debian 0.8.png" alt="Photo debian 2">
+
+<p><strong>reboot</strong></p>
+<p>- La commande reboot sur Debian redémarre le système.</p>
+
+<img src="../../Image/debian 0.9.png" alt="Photo debian 2">
+
+
+<p>Faire un <strong>apt update</strong> </p> 
+<p>- Cette commande pour mettre à jour l'index des paquets disponibles dans les dépôts logiciels configurés.</p>
+
+<img src="../../Image/debian 0.10.png" alt="Photo debian 2">
+
+<p>Faire  <strong>systemc1 statu s apache2</strong> </p>
+<p>- systemctl status apache2 (notez la correction dans le nom de la commande, c'est systemctl et non systemc1) permet d'afficher le statut du service Apache2, le serveur web populaire sur les systèmes comme debian.</p>
+
+<img src="../../Image/debian 0.11.png" alt="Photo debian 2">
+
+
+<p>- Puis aller dans un Edge/Firefox/Google Chrome, puis mettre dans la barre de recherche votre adresse IP. Vous aurez une page qui apparaîtra. Sur l'image l'adresse ip que j'utilise est <strong>172.17.202.12 </strong><p></p>
+
+<img src="../../Image/debian 0.12.png" alt="Photo debian 2">
+
+<p>Aller dans PuTTY puis marquer dans la commende <strong>cd /var/www/html</strong> </p>
+<p>- pour se déplacer dans un répertoire spécifique sur un serveur distant.</p>
+
+
+
+<h2> Methode 1 => Utiliser des adresse IP</h2>
+
+
+<p>Puis faite <strong>ls -l</strong> </p>
+<p>- C'est pour Afficher une liste détaillée des fichiers et répertoires dans le répertoire courant.</p>
+
+<img src="../../Image/1.1.png" alt="Photo debian 2">
+
+
+<p>Faire <strong>nano index.html.</strong></p>  
+<p> - nano est un éditeur de texte simple et léger en ligne de commande.et d'ouvrir le fichier de configuration réseau situé à l'emplacement index.html </p> 
+
+<img src="../../Image/1.2.png" alt="Photo debian 2">
+<img src="../../Image/1.3.png" alt="Photo debian 2">
+
+
+<p>- Vous pouvez faire les modifications dans HTML et CSS. Par exemple dans je met "Salut tout le monde"</p>
+
+<img src="../../Image/1.4.png" alt="Photo debian 2">
+<img src="../../Image/1.5.png" alt="Photo debian 2">
+
+
+<p>Faire un <strong>ls</strong> </p> 
+<p>- sert à lister les fichiers et répertoires d'un répertoire donné. Et voir si on a bien créé.</p>
+
+<img src="../../Image/1.6.png" alt="Photo debian 2">
+
+<p>Faite un cd afin d'enlever" /var/www/html"</p>
+<p>- Puis mettez <strong> cd /etc/apache2</strong> </p>
+
+<p>Faite un <strong>ls -l</strong></p>
+<p>- C'est pour Afficher une liste détaillée des fichiers et répertoires dans le répertoire courant.</p>
+<img src="../../Image/1.7.png" alt="Photo debian 2">
+
+<p><strong>ip  addr add 127.17.202.112/16 dev ens18 label ens18:0 </strong>afin de mettre la page "HTML et CSS"</p> 
+<img src="../../Image/1.8.png" alt="Photo debian 2">
+
+<p>Faire un <strong>ip a</strong> </p>
+<p>- C'est pour Afficher une liste détaillée des fichiers et répertoires dans le répertoire courant.</p>
+
+<img src="../../Image/1.9.png" alt="Photo debian 2">
+
+
+Aller dans web mettez 172.17.202.112  et vous aurez la même chose que l'adresse ip <strong>172.17.202.112 </strong>.
+
+
+
+<p> <strong>a2query -s </strong></p>
+<p>- Il est spécifique aux systèmes Debian et fait partie des outils liés à Apache2, le serveur web populaire.</p>
+
+<img src="../../Image/1.10.png" alt="Photo debian 2">
+
+<p><strong>ls -l</strong></p>
+<p>- C'est pour Afficher une liste détaillée des fichiers et répertoires dans le répertoire courant.</p>
+
+<p><strong>cat 000-default.conf</strong></p>
+<p>- La commande <strong>cat 000-default.conf</strong> est utilisée pour afficher le contenu du fichier 000-default.conf, qui est un fichier de configuration d'Apache2.</p>
+
+<img src="../../Image/1.11.png" alt="Photo debian 2">
+
+
+<p><strong>ls -m</strong></p>
+<p>- La commande <strong>ls -m</strong> dans un terminal  est utilisée pour lister les fichiers et répertoires  dans le répertoire courant, mais avec une particularité : elle affiche les résultats sous forme de liste séparée par des virgules.</p>
+
+<img src="../../Image/1.12.png" alt="Photo debian 2">
+
+
+<h2>Attention </h2>
+<div class="warning">
+
+
+⚠️en cas d'erreur de nom vous pouvez renommer suivez cette étape ⚠️
+
+<p>ls</p>
+<p>- cela apparetra - sert à lister les fichiers et répertoires d'un répertoire donné. Et voir si on a bien créé.</p>
+<p></strong> Site1 Sites2 </strong></p>  
+
+<img src="../../Image/1.13.png" alt="Photo debian 2">
+
+<h2>Fin du probleme</h2>
+</div>
+
+
+<h2>Suite de la procédure</h2>
+
+<p>La suite de l'étape pour activer le virtual host</p>
+
+<img src="../../Image/1.14.png" alt="Photo debian 2">
+
+
+<h2>Methode 2 => Utiliser les ports</h2>
+
+<p>Mettez <strong>a2query -s</strong>  </p>
+<p>- utilisée dans les systèmes Debian et Ubuntu pour interroger le statut des modules Apache2.</p>
+
+<img src="../../Image/1.15.png" alt="Photo debian 2">
+
+
+<p>Faire <strong>a2dissite ip_vhosts </strong></p>
+<p>- La commande <strong>cat 000-default.conf </strong> est utilisée pour afficher le contenu du fichier <strong>000-default.conf </strong>, qui est un fichier de configuration d'Apache2.</p>
+
+<img src="../../Image/1.16.png" alt="Photo debian 2">
+
+
+<p> <strong>systemctl reload apache2 </strong> </p>
+<p>- La commande systemctl reload apache2 est utilisée pour recharger la configuration du serveur web Apache2 sans redémarrer complètement le service.</p>
+<img src="../../Image/1.17.png" alt="Photo debian 2">
+
+
+<p><strong>cat index.html</strong></p>
+<p>- La commande cat index.html dans un terminal Unix ou Linux affiche le contenu du fichier index.html dans le terminal.</p>
+
+<img src="../../Image/1.18.png" alt="Photo debian 2">
+
+ 
+<p><strong>cd /etc/apache2/sites-available/</strong> </p>
+<p>- La commande <strong> cd </strong> permet de changer le répertoire courant vers le répertoire <strong> /etc/apache2/sites-available/ </strong> sur un système Linux (comme Debian ), où sont stockées les configurations des sites pour le serveur web Apache2.</p>
+
+<img src="../../Image/1.19.png" alt="Photo debian 2">
+
+<p><strong>ls -l</strong></p>
+<p>- C'est pour Afficher une liste détaillée des fichiers et répertoires dans le répertoire courant.</p>
+
+<img src="../../Image/1.20.png" alt="Photo debian 2">
+
+
+<p><strong>cp ip_vhosts.conf port_vhosts.conf</strong> </p>
+<p>- La commande cp ip_vhosts.conf port_vhosts.conf est utilisée pour copier un fichier sur un autre fichier ou répertoire dans un système</p>
+
+<img src="../../Image/1.21.png" alt="Photo debian 2">
+
+<p><strong>ls -s</strong></p>
+<p>- La commande ls -s est utilisée pour afficher la taille des fichiers et des répertoires dans le répertoire courant ou spécifié.</p>
+
+<img src="../../Image/1.22.png" alt="Photo debian 2">
+
+<p><strong>nano port_vhosts.conf</strong> </p>
+<p>- nano  est un éditeur de texte simple et léger en ligne de commande.et d'ouvrir le fichier de configuration réseau situé à l'emplacement  port_vhosts  </p> 
+
+<img src="../../Image/1.23.png" alt="Photo debian 2">
+
+<p>- Vous arrivez dans une page ou vous devrez modfier l'adresse ip </p>
+
+<img src="../../Image/1.24.png" alt="Photo debian 2">
+
+<p><strong>:8080 </strong></p>
+<p>- Veillez mettre dans l"adresse ip. Le port :8080 fait référence à un numéro de port utilisé dans les adresses URL ou les configurations réseau pour indiquer une connexion au serveur via ce port spécifique.</p>
+
+<img src="../../Image/1.25.png" alt="Photo debian 2">
+
+<p><strong>ls l </strong> </p>
+<p>- C'est pour Afficher une liste détaillée des fichiers et répertoires dans le répertoire courant.</p>
+
+<img src="../../Image/1.26.png" alt="Photo debian 2">
+
+<p><strong>cd</strong> </p>
+<p>- La commande cd est utilisée dans les systèmes debian et linux pour changer le répertoire de travail courant dans le terminal.</p>
+
+<img src="../../Image/1.27.png" alt="Photo debian 2">
+
+<p>Faire un <strong> /var/www/html/site1/index.html</strong> </p>
+<p>- nano est un éditeur de texte simple et léger en ligne de commande.et d'ouvrir le fichier de configuration réseau situé à l'emplacement  /var/wwww/html/site1/index.html </p>
+
+<img src="../../Image/1.28.png" alt="Photo debian 2">
+
+<p>- Mettre un mot 'title' dans et dans 'h1'  afin de voir si cela fonctionne la modification </p>
+
+<img src="../../Image/1.29.png" alt="Photo debian 2">
+
+<p>Faire un  <strong>nano /var/www/html/site2/index.html</strong></p>
+<p>-  nano  est un éditeur de texte simple et léger en ligne de commande et d'ouvrir le fichier de configuration réseau situé à l'emplacement /var/www/html/site2/index.html </p>
+
+<img src="../../Image/1.30.png" alt="Photo debian 2">
+
+<p>- Mettre un mot 'title' dans et dans 'h1'  afin de voir si cela fonctionne la modification 
+   
+<img src="../../Image/1.31.png" alt="Photo debian 2">
+
+
+<p><strong>a2query -s </strong></p>
+<p>- La commende est a2query -s utilisée pour vérifier le statut des modules Apache2 activés ou désactivés sur un système basé sur Debian ou Ubuntu</p>
+
+<img src="../../Image/1.32.png" alt="Photo debian 2">
+
+<p> <strong>a2ensite port_vhosts</strong> </p>
+<p>- utilisée pour activer un site Apache sur un système debian qui utilise Apache2</p>
+
+<img src="../../Image/1.33.png" alt="Photo debian 2">
+
+<p> <strong>systemctl reload apache2</strong></p>
+<p>- La commande systemctl reload apache2 est utilisée pour recharger la configuration du serveur Apache2 sans arrêter complètement le service. Cela permet de prendre en compte les modifications effectuées dans les fichiers de configuration d'Apache sans perturber les connexions en cours.</p>
+
+<img src="../../Image/1.34.png" alt="Photo debian 2">
+
+<p>On attend de ce résultat sur la page web avec l'adresse IP</p>
+<img src="../../Image/1.35.png" alt="Photo debian 2">
+
+<p>Puis dans Putty faire un <strong>cd /etc/apache2</strong>  ensuite <strong>nano ports.conf</strong></p>
+<img src="../../Image/1.36.png" alt="Photo debian 2">
+
+<p>Faire la même chose ci-dessous de l'image  </p>
+<img src="../../Image/1.37.png" alt="Photo debian 2">
+
+<p> <strong>systemctl reload apache2</strong></p>
+<img src="../../Image/1.38.png" alt="Photo debian 2">
+
+<p>Mettre dans la barre de recherche <strong>127.17.202.8080</strong></p>
+<img src="../../Image/1.39.png" alt="Photo debian 2">
+
+<p>Mettre dans la barre de recherche <strong>127.17.202.12</strong></p>
+<img src="../../Image/1.40.png" alt="Photo debian 2">
+
+<p> <strong>systemctl reload apache2 </strong></p>
+<img src="../../Image/1.41.png" alt="Photo debian 2">
+
+
+
+
+<h2>Methode 3 => Utiliser des URL </h2>
+
+<p><strong>cd sites-available</strong> </p>
+<img src="../../Image/2.1.png" alt="Photo debian 2">
+
+<p>Faire un <strong>ls -l</strong></p>
+<img src="../../Image/2.2.png" alt="Photo debian 2">
+
+<p><strong>cp port_vhosts.conf name_vhosts</strong></p>
+<img src="../../Image/2.3.png" alt="Photo debian 2">
+
+<p>Faire un <strong>nano name_vhosts.conf</strong></p>
+<img src="../../Image/2.4.png" alt="Photo debian 2">
+
+<p>Puis, arrivé sur <strong>nano</strong>, vous allez enlever l'adresse IP sauf <strong>: 80</strong> et mettre * sur les deux adresses IP </p>
+<img src="../../Image/2.5.png" alt="Photo debian 2">
+<img src="../../Image/2.6.png" alt="Photo debian 2">
+
+<p>Faire un <strong>ls -l</strong> afin de voir si la configuration a été prise en compte</p>
+<img src="../../Image/2.7.png" alt="Photo debian 2">
+
+
+<p><strong>a2ensite name_vhosts.conf</strong></p>
+<img src="../../Image/2.9.png" alt="Photo debian 2">
+
+<p><strong>Systemctl reload apache2</strong></p>
+<img src="../../Image/2.10.png" alt="Photo debian 2">
+
+
+<p>Si vous allez à la barre de recherche mettez <strong>Site1.mortier.local</strong> la page ne fonctionnera pas. Pour la faire fonctionner suivez les étapes ci-dessous </p> 
+<img src="../../Image/2.11.png" alt="Photo debian 2">
+
+<p>Aller dans <strong>Disque local</strong> puis <strong>Windows</strong> <strong>system32</strong> <strong>drivers</strong> et <strong>etc </strong></p>
+
+<img src="../../Image/2.12.png" alt="Photo debian 2">
+
+
+<p>Ouvrir un bloc note afin de modifier. Mettre un nom à côté de l'adresse IP </p>
+<img src="../../Image/2.13.png" alt="Photo debian 2">
+
+
+<p> Mettre site 1.mortier/local dans la barre de recherche</p>
+<img src="../../Image/2.14.png" alt="Photo debian 2">
+
+<p> Mettre site 2.mortier/local dans la barre de recherche</p>
+<img src="../../Image/2.15.png" alt="Photo debian 2">
+
+</body>
+</html>
+
