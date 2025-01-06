@@ -1,10 +1,10 @@
 <?php
 
 // Charger la fonction pour parser le YAML
-require_once("Page/yaml/yaml.php");
+require_once("../yaml/yaml.php");
 
 // Lire le fichier YAML
-$data = yaml_parse_file('page.yaml');
+$data = yaml_parse_file('Page/page.yaml');
 
 
 ?>
@@ -24,12 +24,12 @@ $data = yaml_parse_file('page.yaml');
 
 
 <button> <li><a href="Page/Accueil/accueil.php" data-text="Acceuil">Acceuil</a></li> </button>
-<button> <li><a href="Page/Compétences/competence.php" data-text="Competences">Compétence</a></li> </button>
+<button> <li><a href="Page/Compétences/competences.php" data-text="Competences">Compétence</a></li> </button>
 <button> <li><a href="Page/Réalisations/réalisation.php" data-text="Réalisation">Réalisation</a></li> </button>
 <button> <li><a href="Page/Formation/formation.php" data-text="Formation">Formation</a></li> </button>
 <button> <li><a href="Page/Contact/contact.php" data-text="Contact">Contact</a></li> </button>
 
-        </ul>
+    
 </body>
 </html>
 
