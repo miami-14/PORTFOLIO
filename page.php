@@ -4,7 +4,7 @@
 require_once("Page/yaml/yaml.php");
 
 // Lire le fichier YAML
-$data = yaml_parse_file('Page/Page/page.yaml');
+$data = yaml_parse_file('page.yaml');
 
 
 ?>
@@ -15,7 +15,7 @@ $data = yaml_parse_file('Page/Page/page.yaml');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Portfolio </title>
-    <link rel="stylesheet" href="Page/Page/page.css">
+    <link rel="stylesheet" href="page.css">
     
     <h1> Bienvenu sur le projet PORTFOLIO  </h1>
    
@@ -23,12 +23,13 @@ $data = yaml_parse_file('Page/Page/page.yaml');
 <body>
 
 
-<button> <li><a href="Page/Accueil/accueil.php" data-text="Acceuil">Accueil</a></li> </button>
-<button> <li><a href="Page/Compétences/competences.yaml" data-text="Competences">Compétences</a></li> </button>
-<button> <li><a href="Page/Réalisations/réalisation.php" data-text="Réalisation">Réalisations</a></li> </button>
-<button> <li><a href="Page/Formation/formation.php" data-text="Formation">Formations</a></li> </button>
+<button> <li><a href="Page/Accueil/accueil.php" data-text="Acceuil">Acceuil</a></li> </button>
+<button> <li><a href="Page/Compétences/competence.php" data-text="Competences">Compétence</a></li> </button>
+<button> <li><a href="Page/Réalisations/réalisation.php" data-text="Réalisation">Réalisation</a></li> </button>
+<button> <li><a href="Page/Formation/formation.php" data-text="Formation">Formation</a></li> </button>
 <button> <li><a href="Page/Contact/contact.php" data-text="Contact">Contact</a></li> </button>
 
-        
+        </ul>
 </body>
 </html>
+
