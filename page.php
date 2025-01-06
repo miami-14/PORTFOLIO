@@ -15,7 +15,7 @@ $data = yaml_parse_file('Page/Page/page.yaml');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Portfolio </title>
-    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="Page/Page/page.css">
     
     <h1> Bienvenu sur le projet PORTFOLIO  </h1>
    
@@ -29,6 +29,6 @@ $data = yaml_parse_file('Page/Page/page.yaml');
 <button> <li><a href="Page/Formation/formation.php" data-text="Formation">Formation</a></li> </button>
 <button> <li><a href="Page/Contact/contact.php" data-text="Contact">Contact</a></li> </button>
 
-        </ul>
+        
 </body>
 </html>
