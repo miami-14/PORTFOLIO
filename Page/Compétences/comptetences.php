@@ -12,10 +12,10 @@ $data = yaml_parse_file('competences.yaml');
 <head>
 <meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title><?= $data["titre"] ?></title>
+<title><?php $data["titre"] ?></title>
 </head>
 <body>
-<h1><?= $data["titre"]?>
+<h1><?php $data["titre"]?>
 <?php foreach ($data["presentation"] as $presentations) {?>
     <h2><?= $presentations["domaine"]?></h2>
     <?php foreach ($presentations["items"] as $item) {?>
