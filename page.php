@@ -4,7 +4,7 @@
 require_once("../yaml/yaml.php");
 
 // Lire le fichier YAML
-$data = yaml_parse_file('page.yaml');
+$data = yaml_parse_file('Page/Page/page.yaml');
 
 
 ?>
