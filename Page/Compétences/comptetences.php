@@ -1,7 +1,7 @@
 <?php
 
 require_once("../yaml/yaml.php");
-$data = yaml_parse_file('compétences.yaml');
+$data = yaml_parse_file('competences.yaml');
 
 ?>
 
