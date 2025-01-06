@@ -23,11 +23,11 @@ $data = yaml_parse_file('page.yaml');
 <body>
 
 
-<button> <li><a href="../Accueil/accueil.php" data-text="Acceuil">Acceuil</a></li> </button>
-<button> <li><a href="../Compétences/comptétences.php" data-text="Compétences">Compétence</a></li> </button>
-<button> <li><a href="../Réalisations/réalisation.php" data-text="Réalisation">Réalisation</a></li> </button>
-<button> <li><a href="../Formation/formation.php" data-text="Formation">Formation</a></li> </button>
-<button> <li><a href="../Contact/contact.php" data-text="Contact">Contact</a></li> </button>
+<button> <li><a href="Page/Accueil/accueil.php" data-text="Acceuil">Acceuil</a></li> </button>
+<button> <li><a href="Page/Compétences/comptétences.php" data-text="Compétences">Compétence</a></li> </button>
+<button> <li><a href="Page/Réalisations/réalisation.php" data-text="Réalisation">Réalisation</a></li> </button>
+<button> <li><a href="Page/Formation/formation.php" data-text="Formation">Formation</a></li> </button>
+<button> <li><a href="Page/Contact/contact.php" data-text="Contact">Contact</a></li> </button>
 
         </ul>
 </body>
