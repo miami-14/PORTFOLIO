@@ -24,7 +24,7 @@ $data = yaml_parse_file('Page/Page/page.yaml');
 
 
 <button> <li><a href="Page/Accueil/accueil.php" data-text="Acceuil">Accueil</a></li> </button>
-<button> <li><a href="Page/Compétences/comptétences.php" data-text="Compétences">Compétences</a></li> </button>
+<button> <li><a href="Page/Compétences/comptetences.php" data-text="Competences">Compétences</a></li> </button>
 <button> <li><a href="Page/Réalisations/réalisation.php" data-text="Réalisation">Réalisations</a></li> </button>
 <button> <li><a href="Page/Formation/formation.php" data-text="Formation">Formations</a></li> </button>
 <button> <li><a href="Page/Contact/contact.php" data-text="Contact">Contact</a></li> </button>
