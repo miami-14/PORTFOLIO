@@ -5,7 +5,7 @@ $data = yaml_parse_file('competences.yaml');
 
 ?>
 
-<link rel='stylesheet' href='compétences.css'>
+<link rel='stylesheet' href='competences.css'>
 
 <!DOCTYPE html>
 <html lang='fr'>
