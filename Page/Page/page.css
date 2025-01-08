@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -16,8 +17,11 @@ body {
 h1 {
     color: #222;
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px; 
     animation: fadeIn 2s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 /* Button Styles */
@@ -60,3 +64,5 @@ a {
 a:hover {
     color: #fff;
 }
+
+
