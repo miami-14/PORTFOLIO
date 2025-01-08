@@ -18,7 +18,7 @@ $data = yaml_parse_file('page.yaml');
    
 </head>
 <body>
-<h1> Bienvenu sur le projet PORTFOLIO de Mia Mortier </h1>
+<h1> Bienvenue sur le projet PORTFOLIO de Mia Mortier </h1>
 
 
 <button> <li><a href="Page/Accueil/accueil.php" data-text="Acceuil">Acceuil</a></li> </button>

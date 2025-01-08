@@ -1,8 +1,8 @@
 Title: "Mes formations"
 Description: "Voici une liste de mes formations et projets."
 CV:
-  URL: "CV.html" # Lien vers le CV
-  Label: "Cliquez ici pour voir mon CV" # Texte affiché pour le lien
+  URL: "CV.html" 
+  Label: "Cliquez ici pour voir mon CV."
 Sections:
   - Id: "Lycée-Saint-Ursule"
     Nom: "Bac STMG"
@@ -10,11 +10,21 @@ Sections:
       économie
       Droit
       SIR
+      Mathématique
+      Espagnol
+      Anglais (Général - ETLV - Euro )
+      Français (Seconde et Première )
+      Management
+      Sport
+      
   - Id: "Caen-sup"
     Nom: "BTS SIO"
     Texte: |
-      Réseau
-      Développer
+      Réseau (SISR)
+      Développer (SLAM)
       Culture générale
       Droit
       économie
+      Cyber Sécurité
+      Anglais
+      Mathématique
