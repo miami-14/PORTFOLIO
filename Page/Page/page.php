@@ -2,7 +2,7 @@
 
 // Charger la fonction pour parser le YAML
 require_once("../yaml/yaml.php");
-// Lire le fichier YAML bbbbbbbb
+// Lire le fichier YAML 
 $data = yaml_parse_file('page.yaml');
 
 ?>
