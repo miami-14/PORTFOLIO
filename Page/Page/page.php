@@ -13,7 +13,7 @@ $data = yaml_parse_file('page.yaml');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Portfolio </title>
-    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="Page/Page/page.css">
     
    
 </head>
