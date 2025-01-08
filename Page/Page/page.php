@@ -21,11 +21,11 @@ $data = yaml_parse_file('page.yaml');
 <h1> Bienvenu sur le projet PORTFOLIO  </h1>
 
 
-<button> <li><a href="../Accueil/accueil.php" data-text="Acceuil">Acceuil</a></li> </button>
+<button> <li><a href="Page/Accueil/accueil.php" data-text="Acceuil">Acceuil</a></li> </button>
 <button> <li><a href="Page/Compétences/competences.php" data-text="competences">Compétences</a></li> </button>
-<button> <li><a href="../Réalisations/réalisation.php" data-text="Réalisation">Réalisations</a></li> </button>
-<button> <li><a href="../Formation/formation.php" data-text="Formation">Formations</a></li> </button>
-<button> <li><a href="../Contact/contact.php" data-text="Contact">Contacts</a></li> </button>
+<button> <li><a href="Page/Réalisations/réalisation.php" data-text="Réalisation">Réalisations</a></li> </button>
+<button> <li><a href="Page/Formation/formation.php" data-text="Formation">Formations</a></li> </button>
+<button> <li><a href="Page/Contact/contact.php" data-text="Contact">Contacts</a></li> </button>
 
     
 </body>
