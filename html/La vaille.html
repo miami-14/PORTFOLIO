@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La veille</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-image: url('https://sfile.chatglm.cn/images-ppt/00955c6e533c.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 32, 96, 0.85);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 30px 70px 15px;
+        }
+
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: #a3c2ff;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 0 70px 40px;
+        }
+
+        /* VEILLE */
+        .veille-container {
+            margin-bottom: 40px;
+        }
+
+        .veille-title {
+            font-size: 28px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #a3c2ff;
+        }
+
+        .veille-text {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .veille-image {
+            margin-top: 20px;
+        }
+
+        .veille-visual {
+            background-color: rgba(163, 194, 255, 0.15);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .image-placeholder {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .image-hint {
+            font-size: 14px;
+            color: #a3c2ff;
+            margin-top: 5px;
+        }
+
+        /* SOURCES */
+        .sources-section {
+            margin-top: 40px;
+        }
+
+        .sources-title {
+            font-size: 28px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #a3c2ff;
+            margin-bottom: 20px;
+        }
+
+        .sources-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .source-card {
+            background-color: rgba(163, 194, 255, 0.15);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .logo-placeholder {
+            text-align: center;
+        }
+
+        .source-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #a3c2ff;
+        }
+
+        .source-description {
+            font-size: 16px;
+        }
+
+        /* PERSPECTIVES */
+        .perspectives-section {
+            margin-top: 40px;
+        }
+
+        .perspectives-title {
+            font-size: 28px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #a3c2ff;
+            margin-bottom: 20px;
+        }
+
+        .perspectives-card {
+            background-color: rgba(163, 194, 255, 0.15);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(163, 194, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .card-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(163, 194, 255, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #a3c2ff;
+        }
+
+        .card-list {
+            list-style: none;
+        }
+
+        .card-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <div class="overlay">
+
+            <!-- TITRE -->
+            <div class="header">
+                <h1 class="title">La veille</h1>
+            </div>
+
+            <div class="content">
+
+                <!-- SECTION VEILLE -->
+                <div class="veille-container">
+                    <h2 class="veille-title">
+                        <i class="material-icons">trending_up</i>
+                        Qu'est-ce que la veille ?
+                    </h2>
+
+                    <p class="veille-text">Processus <strong>actif</strong> de surveillance des évolutions</p>
+                    <p class="veille-text">Essentielle pour un professionnel de l'informatique</p>
+
+                    <div class="veille-image">
+                        <div class="veille-visual">
+                            <i class="material-icons" style="font-size:40px;">search</i>
+                            <p class="image-placeholder">
+                                <i class="material-icons">add_photo_alternate</i>
+                                Image pour la veille
+                            </p>
+                            <p class="image-hint">Format recommandé : PNG/JPG</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOURCES -->
+                <div class="sources-section">
+                    <h2 class="sources-title">
+                        <i class="material-icons">rss_feed</i>
+                        Les sources
+                    </h2>
+
+                    <div class="sources-grid">
+
+                        <div class="source-card">
+                            <div class="logo-placeholder">
+                                <i class="material-icons">notifications</i>
+                                <p>Google Alerts</p>
+                                <p class="image-hint">PNG/JPG</p>
+                            </div>
+                            <div>
+                                <h3 class="source-name">Google Alerts</h3>
+                                <p class="source-description">Notifications personnalisées pour suivre les actualités</p>
+                            </div>
+                        </div>
+
+                        <div class="source-card">
+                            <div class="logo-placeholder">
+                                <i class="material-icons">rss_feed</i>
+                                <p>Feedly</p>
+                                <p class="image-hint">PNG/JPG</p>
+                            </div>
+                            <div>
+                                <h3 class="source-name">Feedly</h3>
+                                <p class="source-description">Agrégateur de flux RSS pour centraliser l'information</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PERSPECTIVES -->
+                <div class="perspectives-section">
+                    <h2 class="perspectives-title">
+                        <i class="material-icons">trending_up</i>
+                        Perspectives professionnelles
+                    </h2>
+
+                    <div class="perspectives-card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="material-icons">settings</i>
+                            </div>
+                            <h3 class="card-title">Réalisations en entreprise</h3>
+                        </div>
+
+                        <ul class="card-list">
+                            <li class="card-item">
+                                <i class="material-icons">check_circle</i>
+                                <span><strong>Projet GSB</strong> : Développement d'application de gestion</span>
+                            </li>
+                            <li class="card-item">
+                                <i class="material-icons">check_circle</i>
+                                <span><strong>Projet GSB</strong> : Développement d'application web</span>
+                            </li>
+                            <li class="card-item">
+                                <i class="material-icons">check_circle</i>
+                                <span><strong>Support</strong> technique</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>

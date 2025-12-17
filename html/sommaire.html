@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sommaire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #ffffff;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-image: url('https://sfile.chatglm.cn/images-ppt/3a6982ac26e1.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 32, 96, 0.85);
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .header {
+            padding: 50px 70px 20px;
+        }
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: #a3c2ff;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 0 70px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 25px 60px;
+        }
+        .toc-item {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            color: #ffffff;
+            transition: transform 0.3s;
+            background-color: rgba(163, 194, 255, 0.1);
+            border-radius: 8px;
+            padding: 16px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .toc-item:hover {
+            transform: translateX(10px);
+            background-color: rgba(163, 194, 255, 0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .toc-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: #a3c2ff;
+            margin-right: 15px;
+            min-width: 40px;
+        }
+        .toc-text {
+            font-weight: 600;
+        }
+        .toc-icon {
+            margin-right: 15px;
+            color: #a3c2ff;
+            font-size: 24px;
+        }
+        .footer {
+            padding: 20px 70px;
+            font-size: 16px;
+            color: #a3c2ff;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="overlay">
+            <div class="header">
+                <h1 class="title">Sommaire</h1>
+            </div>
+            <div class="content">
+                <div class="toc-list">
+                    <div class="toc-item">
+                        <span class="toc-number">01</span>
+                        <i class="material-icons toc-icon">person</i>
+                        <span class="toc-text">Présentation Personnelle</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-number">02</span>
+                        <i class="material-icons toc-icon">school</i>
+                        <span class="toc-text">Réalisations en Formation</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-number">03</span>
+                        <i class="material-icons toc-icon">business</i>
+                        <span class="toc-text">Présentation NCI</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-number">04</span>
+                        <i class="material-icons toc-icon">work</i>
+                        <span class="toc-text">Réalisations en Entreprise</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-number">05</span>
+                        <i class="material-icons toc-icon">trending_up</i>
+                        <span class="toc-text">La veille</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-number">06</span>
+                        <i class="material-icons toc-icon">psychology</i>
+                        <span class="toc-text">Compétences Développées</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-number">07</span>
+                        <i class="material-icons toc-icon">assessment</i>
+                        <span class="toc-text">Bilan et perspectives</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div>Mia Mortier - BTS SIO 2ème année</div>
+                <div>Présentation Orale</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
